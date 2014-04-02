@@ -36,142 +36,258 @@
 
 <body>
 
-    <div class="reveal">
+<div class="reveal">
 
-        <!-- Any section element inside of this container is displayed as a slide -->
-        <div class="slides" ng-app="slides">
-            <section id="opening">
-                <section>
-                    <div class="logos">
-                        <img src="images/nodejs%20(1).png" alt="Node.js Logo" />
-                        <img src="images/logo.png" alt="Karma Logo" />
-                        <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
-                        <img src="images/angularjs-shield.png" alt="AngularJS logo" />
-                    </div>
-                    <h2>But How Do I Test, Really?!?!</h2>
-                    <!--<br />-->
-
-                    <h4>A definition and functional description of how to get started testing in Modern Javascript.</h4>
-                </section>
-                <section>
-                    <!-- founder -->
-                    <img class="column two" src="images/me.jpg" title="Rhett Lowe"
-                         alt="Rhett Lowe in helmet, ready for battle." />
-
-                    <div class="column two left-align">
-                        <h2>Rhett Lowe</h2>
-                        <br />
-                        <ul>
-                            <li>Work at i-Showcase, Inc.</li>
-                            <li>AngularJS for 12+ months</li>
-                            <li><a href="https://github.com/rhettl">GitHub</a></li>
-                            <li><a href="https://plus.google.com/+RhettLowe">Google+</a></li>
-                        </ul>
-                    </div>
-                    <aside class="notes">
-                        <p>this is me. I am not in many places yet and I haven't been on the scene long, but I have been
-                           working hard and learning much.</p>
-                    </aside>
-                </section>
-            </section>
-
-            <section id="why-not-test">
-                <section>
-                    <h2>Why don't you test?</h2>
-                </section>
-                <section>
-                    <h3>Reasons people give</h3>
-                    <br />
-                    <ul>
-                        <li>"I have legacy code."</li>
-                        <li>"I don't have the time."</li>
-                        <li>"My boss isn't into it."</li>
-                        <li>"I know my code works."</li>
-                        <li>"I don't see the point."</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Reasons people don't give</h3>
-                    <h4>(but are more true)</h4>
-                    <br />
-                    <ul>
-                        <li>"I don't know how."</li>
-                        <li>"I don't know how to get started."</li>
-                    </ul>
-
-                    <aside class="notes">
-                        <p>More often then not we all know HOW to test on a theoretical sense. This is similar to how I
-                           as an engineer have a theoretical working knowledge of the internal workings of the
-                           combustion engine. That said, I cannot fix a combustion engine not would I know the first
-                           thing about where to start or really how to build one from scratch.</p>
-
-                        <p>More often then not we work in multiple environments with multiple different testing
-                           requirements and unless we already know how to do tests in all of those environments we wont
-                           do testing at all -- or at least on the lenguages we don't know how to test on.</p>
-
-
-                    </aside>
-                </section>
-                <section>
-                    <h3>Javascript in Testing</h3>
-                    <br />
-
-                </section>
-            </section>
-
-
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides" ng-app="slides">
+        <section id="opening">
             <section>
-                <section>
-                    <h2>Online</h2>
+                <div class="logos">
+                    <img src="images/nodejs%20(1).png" alt="Node.js Logo" />
+                    <img src="images/logo.png" alt="Karma Logo" />
+                    <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
+                    <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
+                </div>
+                <h2>But How Do I Test, Really?!?!</h2>
+                <!--<br />-->
 
-                    <p><a href="https://www.github.com/rhettl/ngModelController-slides">github.com/rhettl/ngModelController-slides</a>
-                    </p>
-                </section>
+                <h4>A definition and functional description of how to get started testing in Modern Javascript.</h4>
             </section>
-        </div>
+            <section>
+                <!-- founder -->
+                <img class="column two" src="images/me.jpg" title="Rhett Lowe"
+                     alt="Rhett Lowe in helmet, ready for battle." />
 
+                <div class="column two left-align">
+                    <h2>Rhett Lowe</h2>
+                    <br />
+                    <ul>
+                        <li>Work at i-Showcase, Inc.</li>
+                        <li>AngularJS for 12+ months</li>
+                        <li><a href="https://github.com/rhettl">GitHub</a></li>
+                        <li><a href="https://plus.google.com/+RhettLowe">Google+</a></li>
+                    </ul>
+                </div>
+                <aside class="notes">
+                    <p>this is me. I am not in many places yet and I haven't been on the scene long, but I have been
+                       working hard and learning much.</p>
+                </aside>
+            </section>
+        </section>
+
+        <section id="why-not-test">
+            <section>
+                <h2>Why don't you test?</h2>
+            </section>
+            <section>
+                <h3>Reasons people give</h3>
+                <br />
+                <ul>
+                    <li>"I have legacy code."</li>
+                    <li>"I don't have the time."</li>
+                    <li>"My boss isn't into it."</li>
+                    <li>"I know my code works."</li>
+                    <li>"I don't see the point."</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Reasons people don't give</h3>
+                <h4>(but are more true)</h4>
+                <br />
+                <ul>
+                    <li>"I don't know how."</li>
+                    <li>"I don't know how to get started."</li>
+                </ul>
+
+                <aside class="notes">
+                    <p>More often then not we all know HOW to test on a theoretical sense. This is similar to how I
+                       as an engineer have a theoretical working knowledge of the internal workings of the
+                       combustion engine. That said, I cannot fix a combustion engine not would I know the first
+                       thing about where to start or really how to build one from scratch.</p>
+
+                    <p>More often then not we work in multiple environments with multiple different testing
+                       requirements and unless we already know how to do tests in all of those environments we wont
+                       do testing at all -- or at least on the lenguages we don't know how to test on.</p>
+
+
+                </aside>
+            </section>
+            <section>
+                <h3>Javascript and Testing</h3>
+                <h4>(Before)</h4>
+                <br />
+                <ul>
+                    <li>JS is horrible for testing</li>
+                    <li>Different browsers => Different tests</li>
+                    <li>Internet Explorer!</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Javascript and Testing</h3>
+                <h4>(Now)</h4>
+                <br />
+                <ul>
+                    <li>Major Backlash</li>
+                    <li>Frameworks and languages meant JUST for JS</li>
+                    <li>YOU CAN TEST INTERNET EXPLORER!!!</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Where do I start??</h2>
+                <h4>What does this mean??</h4>
+            </section>
+            <section>
+                <h3>Words we have heard</h3>
+                <br />
+                <ul class="column two no-bullet left narrow">
+                    <li>Jasmine</li>
+                    <li>Karma</li>
+                    <li>Testacular</li>
+                    <li>Spec</li>
+                </ul>
+                <ul class="column two no-bullet right wide">
+                    <li>Test Runner</li>
+                    <li>Test Framework</li>
+                    <li>Test Driven Development (TDD)</li>
+                    <li>Behavior Driven Development (BDD)</li>
+                </ul>
+
+                <aside class="notes">
+                    <h3>Definitions</h3>
+                    <ul>
+                        <li>Jasmine :: This is a simplified language to make testing easier to read as if it were in
+                            english. It is a Testing Framework
+                        </li>
+                        <li>Karma :: This is a platform to run tests automatically and in many browsers. It is a
+                            Testing Framework
+                        </li>
+                        <li>Testacular :: was the original name for Karma. Same thing. when you see it think Karma
+                            instead of testicle.
+                        </li>
+                        <li>Spec :: This is a set of requirements for your code written in english. It is not always
+                            written by the developer. It is used to help better write testing.
+                        </li>
+                        <li>Test Runner :: Any program meant to control when to run tests, what tests to run, and on
+                            what platforms/browsers to run them.
+                        </li>
+                        <li>Test Framework :: is a platform/language to simplify your test running.</li>
+                        <li>TDD :: This is a paradigm to help modify your workflow putting Spec-design and test
+                            writing first and coding second. The paradigm is sound and it makes knowing WHAT to
+                            program and WHERE to start much easier.
+                        </li>
+                        <li>BDD :: is a modification of the TDD paradigm. It puts users first, then specs, then tests,
+                            then code.
+                        </li>
+                    </ul>
+                    <p>I'll explain more about most of these in future slides.</p>
+                </aside>
+            </section>
+            <section>
+                <div class="logos">
+                    <img src="images/nodejs%20(1).png" alt="Node.js Logo" />
+                    <img src="images/logo.png" alt="Karma Logo" />
+                    <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
+                    <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
+                </div>
+            </section>
+            <section>
+                <div class="image-outline">
+                    <img src="images/nodejs%20(1).png" alt="Node.js Logo" />
+                    <span class="desc">None.js - Platform</span>
+
+                    <div class="image-outline">
+                        <img src="images/logo.png" alt="Karma Logo" />
+                        <span class="desc">Karma - Test Runner</span>
+
+                        <div class="image-outline">
+                            <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
+                            <span class="desc">Jasmine - Test Framework</span>
+
+                            <div class="image-outline">
+                                <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
+                                <span class="desc">Source Code - Actual Code</span>
+
+                                <pre ng-non-bindable><code data-trim>
+var Calc = function() {
+  this.total = 0;
+
+  this.equals = function() { /* ... */ };
+  this.clear = function() { /* ... */ };
+
+  this.add = function() { /*... */ };
+  this.subtract = function() { /*... */ };
+  this.multiply = function() { /*... */ };
+  this.divide = function() { /*... */ };
+
+  this.less = this.minus = this.subtract;
+  this.greaterThan = this.plus = this.add;
+  this.and = this.by = this.multiply;
+  this.over = this.dividedBy = this.divide;
+
+};
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Online</h2>
+
+                <p><a href="https://www.github.com/rhettl/ngModelController-slides">github.com/rhettl/ngModelController-slides</a>
+                </p>
+            </section>
+        </section>
     </div>
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/app/application.js"></script>
+</div>
 
-    <script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/app/application.js"></script>
 
-        // Full list of configuration options available here:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-                              controls: true,
-                              progress: true,
-                              history : true,
-                              center  : true,
+<script>
 
-                              theme       : Reveal.getQueryHash().theme, // available themes are in /css/theme
-                              transition  : Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+                          controls: true,
+                          progress: true,
+                          history : true,
+                          center  : true,
 
-                              // Optional libraries used to extend on reveal.js
-                              dependencies: [
-                                  { src: 'lib/js/classList.js', condition: function() {
-                                      return !document.body.classList;
-                                  } },
-                                  { src: 'plugin/markdown/marked.js', condition: function() {
-                                      return !!document.querySelector('[data-markdown]');
-                                  } },
-                                  { src: 'plugin/markdown/markdown.js', condition: function() {
-                                      return !!document.querySelector('[data-markdown]');
-                                  } },
-                                  { src: 'plugin/highlight/highlight.js', async: true, callback: function() {
-                                      hljs.initHighlightingOnLoad();
-                                  } },
-                                  { src: 'plugin/notes/notes.js', async: true, condition: function() {
-                                      return !!document.body.classList;
-                                  } }
+                          theme       : Reveal.getQueryHash().theme, // available themes are in /css/theme
+                          transition  : Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-                              ]
-                          });
+                          // Optional libraries used to extend on reveal.js
+                          dependencies: [
+                              { src: 'lib/js/classList.js', condition: function() {
+                                  return !document.body.classList;
+                              } },
+                              { src: 'plugin/markdown/marked.js', condition: function() {
+                                  return !!document.querySelector('[data-markdown]');
+                              } },
+                              { src: 'plugin/markdown/markdown.js', condition: function() {
+                                  return !!document.querySelector('[data-markdown]');
+                              } },
+                              { src: 'plugin/highlight/highlight.js', async: true, callback: function() {
+                                  hljs.initHighlightingOnLoad();
+                              } },
+                              { src: 'plugin/notes/notes.js', async: true, condition: function() {
+                                  return !!document.body.classList;
+                              } }
 
-    </script>
+                          ]
+                      });
+
+</script>
 
 </body>
 </html>
