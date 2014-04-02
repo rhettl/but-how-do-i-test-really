@@ -1,0 +1,65 @@
+.reveal section img.logo {
+	outline: none;
+	border: 0; 
+	background: none;
+	box-shadow: none;
+	width: 110%;
+}
+.reveal section div.logos img {
+    outline: none;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    display: inline-block;
+    width: 20%;
+    height: auto;
+    margin: 1%;
+}
+
+.reveal section h2 {
+    margin-bottom: 30px;
+}
+strong {
+    font-weight: bolder;
+}
+
+.reveal pre code {
+    max-height: 600px;
+}
+
+.reveal section input, .reveal section button {
+    font-size: 100%;
+}
+.reveal pre.inline {
+    display: inline-block;
+    text-transform: none;
+    width: inherit;
+}
+
+.reveal pre.inline code {
+    overflow: visible;
+}
+
+.reveal .column {
+    margin: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+.reveal .column.two{
+    width: 45%;
+}
+.reveal .left-align {
+    text-align: left;
+}
+.reveal table {
+    width: 100%;
+}
+.reveal table tr td{
+    text-align: center;
+}
+.reveal table tr td:first-child{
+    text-align: left;
+}
+.reveal table tr td:last-child{
+    text-align: right;
+}
