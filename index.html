@@ -36,258 +36,834 @@
 
 <body>
 
-<div class="reveal">
+    <div class="reveal">
 
-    <!-- Any section element inside of this container is displayed as a slide -->
-    <div class="slides" ng-app="slides">
-        <section id="opening">
-            <section>
-                <div class="logos">
-                    <img src="images/nodejs%20(1).png" alt="Node.js Logo" />
-                    <img src="images/logo.png" alt="Karma Logo" />
-                    <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
-                    <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
-                </div>
-                <h2>But How Do I Test, Really?!?!</h2>
-                <!--<br />-->
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides" ng-app="slides">
+            <section id="opening">
+                <section>
+                    <div class="logos">
+                        <img src="images/nodejs%20(1).png" alt="Node.js Logo" />
+                        <img src="images/logo.png" alt="Karma Logo" />
+                        <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
+                        <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
+                    </div>
+                    <h2>But How Do I Test, Really?!?!</h2>
+                    <!--<br />-->
 
-                <h4>A definition and functional description of how to get started testing in Modern Javascript.</h4>
+                    <h4>A definition and functional description of how to get started testing in Modern Javascript.</h4>
+                </section>
+                <section>
+                    <!-- founder -->
+                    <img class="column two" src="images/me.jpg" title="Rhett Lowe"
+                         alt="Rhett Lowe in helmet, ready for battle." />
+
+                    <div class="column two left-align">
+                        <h2>Rhett Lowe</h2>
+                        <br />
+                        <ul>
+                            <li>Work at i-Showcase, Inc.</li>
+                            <li>AngularJS for 12+ months</li>
+                            <li><a href="https://github.com/rhettl">GitHub</a></li>
+                            <li><a href="https://plus.google.com/+RhettLowe">Google+</a></li>
+                        </ul>
+                    </div>
+                    <aside class="notes">
+                        <p>this is me. I am not in many places yet and I haven't been on the scene long, but I have been
+                            working hard and learning much.</p>
+                    </aside>
+                </section>
             </section>
-            <section>
-                <!-- founder -->
-                <img class="column two" src="images/me.jpg" title="Rhett Lowe"
-                     alt="Rhett Lowe in helmet, ready for battle." />
 
-                <div class="column two left-align">
-                    <h2>Rhett Lowe</h2>
+            <section id="why-not-test">
+                <section>
+                    <h2>Why don't you test?</h2>
+                </section>
+                <section>
+                    <h3>Reasons people give</h3>
                     <br />
                     <ul>
-                        <li>Work at i-Showcase, Inc.</li>
-                        <li>AngularJS for 12+ months</li>
-                        <li><a href="https://github.com/rhettl">GitHub</a></li>
-                        <li><a href="https://plus.google.com/+RhettLowe">Google+</a></li>
+                        <li>"I have legacy code."</li>
+                        <li>"I don't have the time."</li>
+                        <li>"My boss isn't into it."</li>
+                        <li>"I know my code works."</li>
+                        <li>"I don't see the point."</li>
                     </ul>
-                </div>
-                <aside class="notes">
-                    <p>this is me. I am not in many places yet and I haven't been on the scene long, but I have been
-                       working hard and learning much.</p>
-                </aside>
-            </section>
-        </section>
-
-        <section id="why-not-test">
-            <section>
-                <h2>Why don't you test?</h2>
-            </section>
-            <section>
-                <h3>Reasons people give</h3>
-                <br />
-                <ul>
-                    <li>"I have legacy code."</li>
-                    <li>"I don't have the time."</li>
-                    <li>"My boss isn't into it."</li>
-                    <li>"I know my code works."</li>
-                    <li>"I don't see the point."</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Reasons people don't give</h3>
-                <h4>(but are more true)</h4>
-                <br />
-                <ul>
-                    <li>"I don't know how."</li>
-                    <li>"I don't know how to get started."</li>
-                </ul>
-
-                <aside class="notes">
-                    <p>More often then not we all know HOW to test on a theoretical sense. This is similar to how I
-                       as an engineer have a theoretical working knowledge of the internal workings of the
-                       combustion engine. That said, I cannot fix a combustion engine not would I know the first
-                       thing about where to start or really how to build one from scratch.</p>
-
-                    <p>More often then not we work in multiple environments with multiple different testing
-                       requirements and unless we already know how to do tests in all of those environments we wont
-                       do testing at all -- or at least on the lenguages we don't know how to test on.</p>
-
-
-                </aside>
-            </section>
-            <section>
-                <h3>Javascript and Testing</h3>
-                <h4>(Before)</h4>
-                <br />
-                <ul>
-                    <li>JS is horrible for testing</li>
-                    <li>Different browsers => Different tests</li>
-                    <li>Internet Explorer!</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Javascript and Testing</h3>
-                <h4>(Now)</h4>
-                <br />
-                <ul>
-                    <li>Major Backlash</li>
-                    <li>Frameworks and languages meant JUST for JS</li>
-                    <li>YOU CAN TEST INTERNET EXPLORER!!!</li>
-                </ul>
-            </section>
-        </section>
-
-        <section>
-            <section>
-                <h2>Where do I start??</h2>
-                <h4>What does this mean??</h4>
-            </section>
-            <section>
-                <h3>Words we have heard</h3>
-                <br />
-                <ul class="column two no-bullet left narrow">
-                    <li>Jasmine</li>
-                    <li>Karma</li>
-                    <li>Testacular</li>
-                    <li>Spec</li>
-                </ul>
-                <ul class="column two no-bullet right wide">
-                    <li>Test Runner</li>
-                    <li>Test Framework</li>
-                    <li>Test Driven Development (TDD)</li>
-                    <li>Behavior Driven Development (BDD)</li>
-                </ul>
-
-                <aside class="notes">
-                    <h3>Definitions</h3>
+                </section>
+                <section>
+                    <h3>Reasons people don't give</h3>
+                    <h4>(but are more true)</h4>
+                    <br />
                     <ul>
-                        <li>Jasmine :: This is a simplified language to make testing easier to read as if it were in
-                            english. It is a Testing Framework
-                        </li>
-                        <li>Karma :: This is a platform to run tests automatically and in many browsers. It is a
-                            Testing Framework
-                        </li>
-                        <li>Testacular :: was the original name for Karma. Same thing. when you see it think Karma
-                            instead of testicle.
-                        </li>
-                        <li>Spec :: This is a set of requirements for your code written in english. It is not always
-                            written by the developer. It is used to help better write testing.
-                        </li>
-                        <li>Test Runner :: Any program meant to control when to run tests, what tests to run, and on
-                            what platforms/browsers to run them.
-                        </li>
-                        <li>Test Framework :: is a platform/language to simplify your test running.</li>
-                        <li>TDD :: This is a paradigm to help modify your workflow putting Spec-design and test
-                            writing first and coding second. The paradigm is sound and it makes knowing WHAT to
-                            program and WHERE to start much easier.
-                        </li>
-                        <li>BDD :: is a modification of the TDD paradigm. It puts users first, then specs, then tests,
-                            then code.
-                        </li>
+                        <li>"I don't know how."</li>
+                        <li>"I don't know how to get started."</li>
                     </ul>
-                    <p>I'll explain more about most of these in future slides.</p>
-                </aside>
-            </section>
-            <section>
-                <div class="logos">
-                    <img src="images/nodejs%20(1).png" alt="Node.js Logo" />
-                    <img src="images/logo.png" alt="Karma Logo" />
-                    <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
-                    <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
-                </div>
-            </section>
-            <section>
-                <div class="image-outline">
-                    <img src="images/nodejs%20(1).png" alt="Node.js Logo" />
-                    <span class="desc">None.js - Platform</span>
 
-                    <div class="image-outline">
+                    <aside class="notes">
+                        <p>More often then not we all know HOW to test on a theoretical sense. This is similar to how I
+                            as an engineer have a theoretical working knowledge of the internal workings of the
+                            combustion engine. That said, I cannot fix a combustion engine not would I know the first
+                            thing about where to start or really how to build one from scratch.</p>
+
+                        <p>More often then not we work in multiple environments with multiple different testing
+                            requirements and unless we already know how to do tests in all of those environments we wont
+                            do testing at all -- or at least on the lenguages we don't know how to test on.</p>
+
+
+                    </aside>
+                </section>
+                <section>
+                    <h3>Javascript and Testing</h3>
+                    <h4>(Before)</h4>
+                    <br />
+                    <ul>
+                        <li>JS is horrible for testing</li>
+                        <li>Different browsers => Different tests</li>
+                        <li>Internet Explorer!</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Javascript and Testing</h3>
+                    <h4>(Now)</h4>
+                    <br />
+                    <ul>
+                        <li>Major Backlash</li>
+                        <li>Frameworks and languages meant JUST for JS</li>
+                        <li>YOU CAN TEST INTERNET EXPLORER!!!</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Where do I start??</h2>
+                    <h4>What does this mean??</h4>
+                </section>
+                <section>
+                    <h3>Words we have heard</h3>
+                    <br />
+                    <ul class="column two no-bullet left narrow">
+                        <li>Jasmine</li>
+                        <li>Karma</li>
+                        <li>Testacular</li>
+                        <li>Spec</li>
+                    </ul>
+                    <ul class="column two no-bullet right wide">
+                        <li>Test Runner</li>
+                        <li>Test Framework</li>
+                        <li>Test Driven Development (TDD)</li>
+                        <li>Behavior Driven Development (BDD)</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <h3>Definitions</h3>
+                        <ul>
+                            <li>Jasmine :: This is a simplified language to make testing easier to read as if it were in
+                                english. It is a Testing Framework
+                            </li>
+                            <li>Karma :: This is a platform to run tests automatically and in many browsers. It is a
+                                Testing Framework
+                            </li>
+                            <li>Testacular :: was the original name for Karma. Same thing. when you see it think Karma
+                                instead of testicle.
+                            </li>
+                            <li>Spec :: This is a set of requirements for your code written in english. It is not always
+                                written by the developer. It is used to help better write testing.
+                            </li>
+                            <li>Test Runner :: Any program meant to control when to run tests, what tests to run, and on
+                                what platforms/browsers to run them.
+                            </li>
+                            <li>Test Framework :: is a platform/language to simplify your test running.</li>
+                            <li>TDD :: This is a paradigm to help modify your workflow putting Spec-design and test
+                                writing first and coding second. The paradigm is sound and it makes knowing WHAT to
+                                program and WHERE to start much easier.
+                            </li>
+                            <li>BDD :: is a modification of the TDD paradigm. It puts users first, then specs, then
+                                tests,
+                                then code.
+                            </li>
+                        </ul>
+                        <p>I'll explain more about most of these in future slides.</p>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Test Driven Development</h3>
+                    <br />
+                    <ul>
+                        <li>Boss gives you list of requirements => Spec</li>
+                        <li>Write Spec in language of tests => Test Suite</li>
+                        <li>Write Code to pass tests</li>
+                        <li>Tidy up code to make it more efficient</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Behavior Driven Development</h3>
+                    <br />
+                    <ul>
+                        <li>Boss gives you list of requirements => Spec</li>
+                        <li>Write Spec in language of tests => Test Suite</li>
+                        <li class="bold italic">Consider how a user would mess things up</li>
+                        <li>Write Code to pass tests <span class="bold italic">and make users happy</span></li>
+                        <li>Tidy up code to make it more efficient</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <div class="logos">
+                        <img src="images/nodejs%20(1).png" alt="Node.js Logo" />
                         <img src="images/logo.png" alt="Karma Logo" />
-                        <span class="desc">Karma - Test Runner</span>
+                        <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
+                        <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
+                    </div>
+                    <h2>Let's Put it Together</h2>
+                </section>
+                <section>
+                    <div class="image-outline">
+                        <img src="images/nodejs%20(1).png" alt="Node.js Logo" />
+                        <span class="desc">None.js - Platform</span>
 
                         <div class="image-outline">
-                            <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
-                            <span class="desc">Jasmine - Test Framework</span>
+                            <img src="images/logo.png" alt="Karma Logo" />
+                            <span class="desc">Karma - Test Runner</span>
 
                             <div class="image-outline">
-                                <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
-                                <span class="desc">Source Code - Actual Code</span>
+                                <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
+                                <span class="desc">Jasmine - Test Framework</span>
+
+                                <div class="image-outline">
+                                    <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
+                                    <span class="desc">Source Code - Actual Code</span>
 
                                 <pre ng-non-bindable><code data-trim>
-var Calc = function() {
-  this.total = 0;
+var Calc = function(start) {
+ this.total = start || 0;
 
-  this.equals = function() { /* ... */ };
-  this.clear = function() { /* ... */ };
+ this.equals = function() { /* ... */ };
+ this.clear = function() { /* ... */ };
 
-  this.add = function() { /*... */ };
-  this.subtract = function() { /*... */ };
-  this.multiply = function() { /*... */ };
-  this.divide = function() { /*... */ };
+ this.add = function() { /*... */ };
+ this.subtract = function() { /*... */ };
+ this.multiply = function() { /*... */ };
+ this.divide = function() { /*... */ };
 
-  this.less = this.minus = this.subtract;
-  this.greaterThan = this.plus = this.add;
-  this.and = this.by = this.multiply;
-  this.over = this.dividedBy = this.divide;
-
+ this.less = this.minus = this.subtract;
+ this.greaterThan = this.plus = this.add;
+ this.and = this.by = this.times = this.multiply;
+ this.over = this.dividedBy = this.divide;
 };
                                 </code></pre>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </section>
+                    <aside class="notes">
+                        <h3>This is how they all fit togeather.</h3>
+                        <ul>
+                            <li>Karma Runs on Node.js</li>
+                            <li>Jasmin runs through Karma</li>
+                            <li>Your source code runs inside the Jasmin tests</li>
+                        </ul>
+                        <br />
+                        <ul>
+                            <li>No, Node.js is not needed for Testing</li>
+                            <li>No, Karma is not needed for Testing</li>
+                            <li>No, Jasmin is not needed for Testing</li>
+                            <li>Yes your code is needed</li>
+                        </ul>
+                        <p>If you want to test your code, AngularJS or not, and you want half the work done form you,
+                            you will need Jasmine (or at least some testing framework). Frameworks are the best way to
+                            do QUICK tests that give you UNDERSTANDABLE fail messages</p>
 
-        <section>
+                        <p>If you know that your code is ONLY going to run in one version of one browser, and you plan
+                            to run your tests through github or want to invent some procedure for WHEN you run your
+                            tests you may. Karma knows all these things for you. It does them all easily. Just tell it
+                            WHEN to test (ex: every save or before every commit) and what to test on and it will handle
+                            everything else. No need to waste time deciding when to run it and opening each browser
+                            individually, just run it ALL THE TIME and test in ALL browsers (or most)</p>
+                        <p>Karma sits on Node.js. Is there any question why it is awesome!</p>
+
+                        <p>In short... &lt;Next slide&gt;</p>
+                    </aside>
+                </section>
+            </section>
             <section>
-                <h2>Online</h2>
-
-                <p><a href="https://www.github.com/rhettl/ngModelController-slides">github.com/rhettl/ngModelController-slides</a>
-                </p>
+                <section>
+                    <h2>Do I need all this extra crap??</h2>
+                    <h3>I just want to test!</h3>
+                </section>
+                <section>
+                    <h3>Do I need Jasmin?!?</h3>
+                </section>
+                <section>
+                    <h2>NO!</h2>
+                    <br />
+                    <div class="fragment">
+                        <h4>but...</h4>
+                        <ul class="no-bullet center">
+                            <li>It is the best way to write you tests QUICK</li>
+                            <li>Best way to have UNDERSTANDABLE failure messages</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h3>Do I need Karma?!?</h3>
+                </section>
+                <section>
+                    <h2>NO!</h2>
+                    <br />
+                    <div class="fragment">
+                        <h4>but...</h4>
+                        <ul class="no-bullet center">
+                            <li>Simplest answer to <span class="italic">"When do I test my code?"</span></li>
+                            <li>The Answer is <span class="italic bold">ALWAYS</span></li>
+                        </ul>
+                        <br />
+                        <br />
+                        <ul class="no-bullet center">
+                            <li>Simplest answer to <span class="italic">"What browsers/platforms do I test on?"</span></li>
+                            <li>The Answer is <span class="italic bold">ALL/MOST OF THEM</span></li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h3>Do I need Node.js?!?</h3>
+                </section>
+                <section>
+                    <h2>NO!</h2>
+                    <br />
+                    <div class="fragment">
+                        <h4>but...</h4>
+                        <ul class="no-bullet center">
+                            <li>Karma runs on Node.js</li>
+                            <li>You don't need to know Node.js</li>
+                            <li>Just install and configure Karma</li>
+                            <li>Nothing to it.</li>
+                            <li>&nbsp;</li>
+                            <li>Plus, it is AWESOME</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h3>Moral of the section?</h3>
+                </section>
+                <section>
+                    <h3>Use Node.js, Karma, and Jasmine</h3>
+                    <h4>Save yourself the headache</h4>
+                </section>
             </section>
-        </section>
+
+            <section>
+                <section>
+                    <h2>Let's examine the building blocks</h2>
+                </section>
+                <section>
+                    <div class="image-outline">
+                        <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
+                        <span class="desc">Source Code - Actual Code</span>
+
+                            <pre ng-non-bindable><code data-trim>
+var Calc = function(start) {
+ this.total = start || 0;
+
+ this.equals = function() { /* ... */ };
+ this.clear = function() { /* ... */ };
+
+ this.add = function() { /*... */ };
+ this.subtract = function() { /*... */ };
+ this.multiply = function() { /*... */ };
+ this.divide = function() { /*... */ };
+
+ this.less = this.minus = this.subtract;
+ this.greaterThan = this.plus = this.add;
+ this.and = this.by = this.times = this.multiply;
+ this.over = this.dividedBy = this.divide;
+};
+                            </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h3>Example of running the Calc</h3>
+                    <pre ng-non-bindable><code data-trim>
+var calcA = new Calc(5)
+    .plus(6).greaterThan(10).add(1, 3)
+    .less(10).minus(1, 2)
+    .by(30).and(10)
+    .over(3).dividedBy(16);
+
+console.log(calcA.equals()); // equals 75
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Where is the error?</h3>
+                    <h4>Calc definition or usage of Calc</h4>
+                    <pre ng-non-bindable><code data-trim>
+var calcA = new Calc(5)
+    .plus(6).greaterThan(10).add([1, 3])
+    .less(10).minus([1, 2])
+    .by(30).and(10)
+    .over(3).dividedBy(16);
+
+console.log(calcA.equals()); // equals NaN
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>If we had a test ...</h3>
+                    <h4>We would be more secure in our answer</h4>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Our first test!!</h2>
+                    <h3>Enter Jasmine</h3>
+                </section>
+                <section>
+                    <h3>How spec-writing is made simple</h3>
+                    <br />
+                    <h4>Describe() It()</h4>
+                </section>
+                <section>
+                    <pre ng-non-bindable><code data-trim>
+describe('A Number', function(){
+    var number = 0;
+
+    it('should equal 0 in the beginning', function(){
+        expect(number).toEqual(0);
+    });
+    it('should be 5 after adding 5', function(){
+        expect(number + 5).toEqual(5);
+    });
+    it('should not equal 10 when adding 3', function(){
+        expect(number + 3).not.toEqual(10);
+    });
+    //it('should equal 10 when adding 3', function(){
+    //    expect(number + 3).toEqual(10); // This will fail
+    //});
+});
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>Jasmine test Passing</h4>
+                    <img src="images/jasmine_test_pass.png" alt="Jasmin test Passing" class="x2" />
+                </section>
+                <section>
+                    <h4>Jasmine test failing</h4>
+                    <img src="images/jasmine_test_fail.png" alt="Jasmin test failing" />
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Make a spec for our Calc</h2>
+                </section>
+                <section>
+                    <h3>Our Spec</h3>
+                    <ul>
+                        <li>A Calc should add 2 numbers</li>
+                        <li>A Calc should subtract 2 numbers</li>
+                        <li>A Calc should multiply 2 numbers</li>
+                        <li>A Calc should divide 2 numbers</li>
+                        <li>A Calc should accept multiple args</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Our Calc Tests</h3>
+                    <pre ng-non-bindable><code data-trim>
+describe('A Calc', function(){
+    var calc;
+
+    beforeEach(function(){
+        calc = new Calc(0);
+    });
+
+    it('should add 2 numbers', function(){
+        expect(calc.plus(2).plus(10).equals()).toEqual(12);
+    });
+    it('should subtract 2 numbers', function(){
+        expect(calc.plus(2).minus(10).equals()).toEqual(-8);
+    });
+    it('should multiply 2 numbers', function(){
+        expect(calc.plus(2).times(10).equals()).toEqual(20);
+    });
+    it('should divide 2 numbers', function(){
+        expect(calc.plus(2).over(10).equals()).toEqual(0.2);
+    });
+    it('should accept multiple args', function(){
+        expect(calc.plus(2, 10).equals()).toEqual(12);
+    });
+});
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>It Passed!!</h3>
+                    <img src="images/jasmine_calc_pass2.png" alt="Calc Tests Passing" />
+                </section>
+                <section>
+                    <h3>To run this</h3>
+                    <pre ng-non-bindable><code data-trim>
+<link rel="stylesheet" type="text/css" href="...jasmine.css">
+
+<script type="text/javascript" src="...jasmine.js"></script>
+<script type="text/javascript" src="...jasmine-html.js"></script>
+<script type="text/javascript" src="...boot.js"></script>
+
+<!-- include source files here... -->
+<script type="text/javascript" src="...Calc.js"></script>
+
+<!-- include spec files here... -->
+<script type="text/javascript" src="...CalcSpec.js"></script>
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>That is it!!</h2>
+                    <h3>Who needs Karma!</h3>
+                    <div class="image-outline">
+                        <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
+                        <span class="desc">Jasmine - Test Framework</span>
+
+                        <div class="image-outline">
+                            <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
+                            <span class="desc">Source Code - Actual Code</span>
+
+                                <pre ng-non-bindable><code data-trim>
+var Calc = function(start) {
+    this.total = start || 0;
+
+    this.equals = function() { /* ... */ };
+    this.clear = function() { /* ... */ };
+
+    this.add = function() { /*... */ };
+    this.subtract = function() { /*... */ };
+    this.multiply = function() { /*... */ };
+    this.divide = function() { /*... */ };
+
+    this.less = this.minus = this.subtract;
+    this.greaterThan = this.plus = this.add;
+    this.and = this.by = this.times = this.multiply;
+    this.over = this.dividedBy = this.divide;
+};
+                                </code></pre>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>But does my code work in...</h2>
+                    <h2 class="fragment underline">Internet Explorer?!?</h2>
+                    <h3 class="fragment">(dum dum DUUMM!)</h3>
+                </section>
+                <section>
+                    <h3>How to test for IE</h3>
+                    <br />
+                    <ul class="no-bullet">
+                        <li>Go to IE and run code,</li>
+                        <li>Look for red or green</li>
+                    </ul>
+                    <br />
+                    <br />
+                    <ul class="fragment">
+                        <li>This takes time</li>
+                        <li>What about other browsers?</li>
+                        <li>What if I forget to run it in IE?</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Karma's Selling Points</h2>
+                    <ul>
+                        <li>
+                            Easy setup to test against:
+                            <ul>
+                                <li>Multiple Browsers</li>
+                                <li>w/ Multiple Versions</li>
+                                <li>w/ Multiple Configs</li>
+                            </ul>
+                        </li>
+                        <li>Tests can run in Shell or Server somewhere</li>
+                        <li>
+                            Has plugins for most common systems including:
+                            <ul>
+                                <li>Require.js</li>
+                                <li>Grunt</li>
+                                <li>Gulp</li>
+                                <li>AngularJS</li>
+                            </ul>
+                        </li>
+                        <li>While easy to set up also has EXTENSIVE advanced setup</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>How to setup</h3>
+                    <ol>
+                        <li>Install Node.js and NPM :: <a href="http://nodejs.org/">Nodejs.org</a></li>
+                        <li>Install Karma</li>
+                        <li>Initialize Karma</li>
+                    </ol>
+                </section>
+                <section>
+                    <h4>(After Node.js and NPM Install)</h4>
+                    <pre ng-non-bindable><code data-trim>
+$ npm install karma --save-dev
+
+$ npm install karma-jasmine karma-chrome-launcher --save-dev
+
+$ ./node_modules/karma/bin/karma start
+INFO [karma]: Karma v0.12.3 server started at http://localhost:9876/
+
+$ npm install -g karma-cli
+                    </code></pre>
+                    <a href="http://karma-runner.github.io/0.12/intro/installation.html">Karma Installation</a>
+                    <aside class="notes">
+                        <h3>Setup</h3>
+                        <ol>
+                            <li>Install karma itself in your project</li>
+                            <li>Add on any plugins you may want</li>
+                            <li>Start the server -- it will give you a location to reach it.</li>
+                            <li>If you prefer using the Command Line interface install the CLI</li>
+                            <li>You are now ready to set up Karma</li>
+                        </ol>
+                        <p>This was taken almost directly from the Karma website</p>
+                    </aside>
+                </section>
+                <section>
+                    <h4>Configuration</h4>
+                    <pre ng-non-bindable><code data-trim>
+$ karma init my.conf.js
+
+Which testing framework do you want to use ?
+Press tab to list possible options. Enter to move to the next question.
+> jasmine
+
+Do you want to use Require.js ?
+This will add Require.js plugin.
+Press tab to list possible options. Enter to move to the next question.
+> no
+
+Do you want to capture a browser automatically ?
+Press tab to list possible options.
+Enter empty string to move to the next question.
+> Chrome
+> Firefox
+>
+
+What is the location of your source and test files ?
+You can use glob patterns, eg. "js/*.js" or "test/**/*Spec.js".
+Enter empty string to move to the next question.
+> *.js
+> test/**/*.js
+>
+
+Should any of the files included by the previous patterns be excluded ?
+You can use glob patterns, eg. "**/*.swp".
+Enter empty string to move to the next question.
+>
+
+Do you want Karma to watch all the files and run the tests on change ?
+Press tab to list possible options.
+> yes
+
+Config file generated at "/Users/vojta/Code/karma/my.conf.js".
+
+$ karma start my.conf.js
+                    </code></pre>
+                    <a href="http://karma-runner.github.io/0.12/intro/configuration.html">Karma Configuration</a>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Start by telling Karma where to init.</li>
+                            <li>We will use Jasmine</li>
+                            <li>No i don't include Require.js</li>
+                            <li>List all the browsers you want</li>
+                            <li>List where your tests are</li>
+                            <li>List file exceptions</li>
+                            <li>Turn file watcher on or off. This will run every time you save changes to a file and tell
+                                you if you broke something.</li>
+                            <li>then start karma with the config file.</li>
+                        </ul>
+                        <p>Karma can also write the file in coffee fi you prefer</p>
+                        <p>I have yet to figure our how to run Internet explorer on Ubuntu in a way that is worth the amount
+                            of effort required, but I think you must have the browser on your computer to make it work.
+                            I was going to ask Rit Lee tonight, but he was called away and is not here.</p>
+                    </aside>
+                </section>
+                <section>
+                    <h3>Start Karma with Watchers On</h3>
+                    <img src="images/Karma-testing-start.png" alt="Starting Karma" />
+                </section>
+                <section>
+                    <h3>Added New Tests and Saved</h3>
+                    <pre ng-non-bindable><code data-trim>
+
+describe('A Calc', function(){
+    var calc;
+
+    beforeEach(function(){
+        calc = new Calc(0);
+    });
+
+    /* ... Previous Tests ... */
+
+    it('should res-et back to 0 when res-et', function(){
+        expect(calc.plus(1,2,3).times(10).clear().equals()).toEqual(0);
+    });
+    it('should set the total to any number with set()', function(){
+        expect(calc.set(100).equals()).toEqual(100);
+    });
+});
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Added New Tests and Saved (cont.)</h3>
+                    <img src="images/Karma-watcher-new-test.png" alt="Added Tests Karma" />
+                </section>
+                <section>
+                    <h3>Added set() function to pass test</h3>
+                    <img src="images/Karma-Watch-add-set.png" alt="Added Function Karma" />
+                </section>
+                <section>
+                    <div class="image-outline">
+                        <img src="images/nodejs%20(1).png" alt="Node.js Logo" />
+                        <span class="desc">None.js - Platform</span>
+
+                        <div class="image-outline">
+                            <img src="images/logo.png" alt="Karma Logo" />
+                            <span class="desc">Karma - Test Runner</span>
+
+                            <div class="image-outline">
+                                <img src="images/jasmine_vertical.png" alt="Jasmine Logo" />
+                                <span class="desc">Jasmine - Test Framework</span>
+
+                                <div class="image-outline">
+                                    <img src="images/JavaScript-logo.png" alt="JavaScript logo" />
+                                    <span class="desc">Source Code - Actual Code</span>
+
+                                <pre ng-non-bindable><code data-trim>
+var Calc = function(start) {
+ this.total = start || 0;
+
+ this.equals = function() { /* ... */ };
+ this.clear = function() { /* ... */ };
+ this.set = function() { /* ... */ };
+
+ this.add = function() { /*... */ };
+ this.subtract = function() { /*... */ };
+ this.multiply = function() { /*... */ };
+ this.divide = function() { /*... */ };
+
+ this.less = this.minus = this.subtract;
+ this.greaterThan = this.plus = this.add;
+ this.and = this.by = this.times = this.multiply;
+ this.over = this.dividedBy = this.divide;
+};
+                                </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Quick Review on TDD</h2>
+                    <h3>(Test Driven Development)</h3>
+                </section>
+                <section>
+                    <ol>
+                        <li>Talk to Boss -> Get Spec</li>
+                        <li>Convert Spec to Test Suite</li>
+                        <li>See Tests Fail (red all over)</li>
+                        <li>Write code to pass tests</li>
+                        <li>See Tests Pass (green all over)</li>
+                        <li>Tidy up and make more efficient</li>
+                        <li>Check for failures</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>Downsides to TDD</h3>
+                    <br />
+                    <p>Writing Code just to pass tests <br />!== Good Code <br />!== User Friendly</p>
+                </section>
+                <section>
+                    <h2>Enter BDD</h2>
+                    <h3>(Behavior Driven Development)</h3>
+                </section>
+                <section>
+                    <h3>Modifications to TDD</h3>
+                    <ul>
+                        <li>Consider the User above all else</li>
+                        <li>Consider how code SHOULD be; not JUST to pass tests</li>
+                        <li>Remember to write tests that help the user</li>
+                    </ul>
+                    <br /><br />
+                    <p>Overall: Remember the user is not a computer</p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>What's Next?</h2>
+                    <ul>
+                        <li>WebStorm Integration for Karma <br />:: <a href="http://youtu.be/MVw8N3hTfCI?t=7m39s">Youtube Video from Karma Homepage</a></li>
+                        <li>Git pre-commit-hook <br />:: <a href="https://gist.github.com/brianmriley/6611101">Check tests BEFORE successful commit</a></li>
+                        <li>Add Angular Integration for Karma and Jasmin <br />:: <a
+                                href="http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html">Year of Moo article on Karma and AngularJS</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>This Presentation Online</h2>
+
+                    <p><a href="https://www.github.com/rhettl/but-how-do-i-test-really">github.com/rhettl/but-how-do-i-test-really</a>
+                    </p>
+                </section>
+            </section>
+        </div>
+
     </div>
 
-</div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app/application.js"></script>
 
-<script src="lib/js/head.min.js"></script>
-<script src="js/reveal.min.js"></script>
-<script src="js/angular.min.js"></script>
-<script src="js/app/application.js"></script>
+    <script>
 
-<script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
 
-    // Full list of configuration options available here:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-                          controls: true,
-                          progress: true,
-                          history : true,
-                          center  : true,
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-                          theme       : Reveal.getQueryHash().theme, // available themes are in /css/theme
-                          transition  : Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () {
+                    return !document.body.classList;
+                } },
+                { src: 'plugin/markdown/marked.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                } },
+                { src: 'plugin/markdown/markdown.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                    return !!document.body.classList;
+                } }
 
-                          // Optional libraries used to extend on reveal.js
-                          dependencies: [
-                              { src: 'lib/js/classList.js', condition: function() {
-                                  return !document.body.classList;
-                              } },
-                              { src: 'plugin/markdown/marked.js', condition: function() {
-                                  return !!document.querySelector('[data-markdown]');
-                              } },
-                              { src: 'plugin/markdown/markdown.js', condition: function() {
-                                  return !!document.querySelector('[data-markdown]');
-                              } },
-                              { src: 'plugin/highlight/highlight.js', async: true, callback: function() {
-                                  hljs.initHighlightingOnLoad();
-                              } },
-                              { src: 'plugin/notes/notes.js', async: true, condition: function() {
-                                  return !!document.body.classList;
-                              } }
+            ]
+        });
 
-                          ]
-                      });
-
-</script>
+    </script>
 
 </body>
 </html>

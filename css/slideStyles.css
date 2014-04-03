@@ -43,6 +43,14 @@ strong {
 ul.no-bullet {
     list-style-type: none;
 }
+ul.center {
+    text-align: center;
+}
+
+img.x2{
+    width: 200%;
+    height: auto;
+}
 
 .reveal .column {
     margin: 0.5em;
@@ -93,8 +101,8 @@ ul.no-bullet {
     -o-transition: all .2s linear;
     transition: all .2s linear;
     position: relative;
-    width: 95%;
-    padding: 30px 0 0 30px;
+    width: 90%;
+    padding: 30px 0 0 60px;
 }
 .reveal .image-outline>img {
     outline: none;
@@ -104,14 +112,24 @@ ul.no-bullet {
     position: absolute;
     top: -15px;
     left: 0;
-    width: 30px;
+    width: 60px;
     height: auto;
 }
 .reveal .image-outline>span.desc {
     position: absolute;
     top: -5px;
-    left: 40px;
+    left: 70px;
     font-size: 25px;
 }
 .reveal .image-outline .image-outline {
+}
+
+.bold {
+    font-weight: bold !important;
+}
+.italic {
+    font-style: italic !important;
+}
+.underline {
+    text-decoration: underline;
 }
