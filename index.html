@@ -83,12 +83,27 @@
                     <h3>Reasons people give</h3>
                     <br />
                     <ul>
-                        <li>"I have legacy code."</li>
                         <li>"I don't have the time."</li>
                         <li>"My boss isn't into it."</li>
                         <li>"I know my code works."</li>
                         <li>"I don't see the point."</li>
+                        <li>"I have legacy code."</li>
                     </ul>
+
+                    <aside class="notes">
+                        <p>These reasons are all crap really</p>
+                        <ul>
+                            <li>While this takes you longer to write the first time around, it saves you massive amounts
+                                of time in the future. Effectively a little time now = less or no extra time in the future
+                            </li>
+                            <li>Bosses can be swayed once they see how much time it can save them and how much security
+                                they can gain by having a test suite.</li>
+                            <li>I know my code works too, but does it work tomorrow after the intern has a go with it?</li>
+                            <li> ... No comment ... </li>
+                            <li>This one is the only reason Misko Hevery states is an acceptable answer to why NOT to test.
+                            </li>
+                        </ul>
+                    </aside>
                 </section>
                 <section>
                     <h3>Reasons people don't give</h3>
@@ -102,14 +117,19 @@
                     <aside class="notes">
                         <p>More often then not we all know HOW to test on a theoretical sense. This is similar to how I
                             as an engineer have a theoretical working knowledge of the internal workings of the
-                            combustion engine. That said, I cannot fix a combustion engine not would I know the first
+                            combustion engine. That said, I cannot fix a combustion engine nor would I know the first
                             thing about where to start or really how to build one from scratch.</p>
 
-                        <p>More often then not we work in multiple environments with multiple different testing
+                        <p>Most of us work in multiple environments with multiple different testing
                             requirements and unless we already know how to do tests in all of those environments we wont
                             do testing at all -- or at least on the lenguages we don't know how to test on.</p>
 
+                        <p>We usually don't give thees answers because we know how bad it makes us look as programmers.
+                            When we talk to other programmers, whether they test or not, we feel guilty that we don't test
+                            and we know that we should be testing even though we aren't.</p>
 
+                        <p>Don't feel guilty, Just try testing. It really is not that difficult and it isn't hard to work
+                            into your workflow.</p>
                     </aside>
                 </section>
                 <section>
@@ -117,10 +137,18 @@
                     <h4>(Before)</h4>
                     <br />
                     <ul>
+                        <li>JS is horrible for Cross-ENV</li>
                         <li>JS is horrible for testing</li>
                         <li>Different browsers => Different tests</li>
                         <li>Internet Explorer!</li>
                     </ul>
+
+                    <aside class="notes">
+                        <p>JavaScript used to be a bitch to work with as little as 5 years ago. It was a pain impossible
+                            to truly write cross-env code.</p>
+                        <p>Internet Explorer is evil. It is everywhere and supports NOTHING that is common to other browsers
+                        </p>
+                    </aside>
                 </section>
                 <section>
                     <h3>Javascript and Testing</h3>
